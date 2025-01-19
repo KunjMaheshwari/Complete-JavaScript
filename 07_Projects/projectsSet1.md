@@ -52,3 +52,14 @@ form.addEventListener('submit', function (e) {
   results.innerHTML = `<span>${bmi}</span>`;
 });
 ```
+### project 3
+
+```javascript
+const currentTime = document.querySelector('#clock');
+
+setInterval(function () {
+  let date = new Date();
+  currentTime.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
