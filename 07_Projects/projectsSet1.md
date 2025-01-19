@@ -28,3 +28,27 @@ buttons.forEach((button) => {
   });
 });
 ```
+
+### project 2
+
+```javascript
+const form = document.querySelector('form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+
+  const result = document.querySelector('#results');
+
+  if (height === '' || height < 0) {
+    results.innerHTML = 'Please give a valid height';
+  }
+  if (weight === '' || weight < 0) {
+    results.innerHTML = 'Please give a valid weight';
+  }
+
+  const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+  results.innerHTML = `<span>${bmi}</span>`;
+});
+```
